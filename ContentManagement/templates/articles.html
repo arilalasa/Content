@@ -1,0 +1,18 @@
+{%extends "base.html" %}
+
+{% block title %}Content Management System{% endblock %}
+{%block content %}
+
+
+<button><a href="/ContentManagement/">Create Articl</a></button>
+<br>
+
+{% if list %}
+    {% for items in list %}
+    <a
+        href="/ContentManagement/{{items.id}}/">{{items.id}}---{{items.title}}-----{{items.created_at}}-----{{items.modified_at}}</h4><br>
+    {% endfor%}
+{% endif%}
+{% endblock %}
+
+ 
